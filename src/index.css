@@ -1,0 +1,75 @@
+html,
+body,
+#root {
+  height: 100dvh;
+}
+
+:root {
+  /* Colors */
+  --clr-blue-100: #e1e7fe;
+  --clr-blue-300: #b3d3f1;
+  --clr-blue-500: #345ff6;
+  --clr-blue-900: #253347;
+
+  --clr-grey-300: #acc1de;
+  --clr-grey-500: #5e6e85;
+
+  --clr-gradient-start: #d6fcfe;
+  --clr-gradient-end: #d6e6fe;
+}
+
+/* Font Utils */
+.MuiTypography-root.text-1-sb {
+  font-size: calc(64rem / 16);
+  font-weight: 600;
+}
+
+.MuiTypography-root.text-2-sb {
+  font-size: calc(48rem / 16);
+  font-weight: 600;
+}
+
+.MuiTypography-root.text-3-sb {
+  font-size: calc(32rem / 16);
+  font-weight: 600;
+}
+
+.MuiTypography-root.text-4-sb {
+  font-size: calc(24rem / 16);
+  font-weight: 600;
+}
+
+.MuiTypography-root.text-5-sb {
+  font-size: calc(20rem / 16);
+  font-weight: 600;
+}
+
+.MuiTypography-root.text-6-sb {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.MuiTypography-root.text-6-reg {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.MuiTypography-root.text-7-b {
+  font-size: calc(14rem / 16);
+  font-weight: 700;
+}
+
+.MuiTypography-root.text-7-reg {
+  font-size: calc(14rem / 16);
+  font-weight: 400;
+}
+
+/* Text-color utils */
+
+.MuiTypography-root.text-dark {
+  color: var(--clr-blue-900);
+}
+
+.MuiTypography-root.text-light {
+  color: var(--clr-grey-500);
+}
