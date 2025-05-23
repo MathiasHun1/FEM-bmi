@@ -3,17 +3,11 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 import Paper from '@mui/material/Paper';
-import FormControl from '@mui/material/FormControl';
-import FormLabel from '@mui/material/FormLabel';
-import FormHelperText from '@mui/material/FormHelperText';
-import RadioGroup from '@mui/material/RadioGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Radio from '@mui/material/Radio';
-import { styled } from '@mui/material/styles';
+import Form from './components/Form';
 
 function App() {
   return (
-    <Box>
+    <Box sx={{ pb: 28 }}>
       <Container
         maxWidth="xl"
         sx={{
@@ -22,7 +16,7 @@ function App() {
             position: 'absolute',
             content: '""',
             inset: 0,
-            bottom: '30%',
+            bottom: '10%',
             background:
               'linear-gradient(to right, white, var(--clr-gradient-end))',
             borderBottomLeftRadius: '35px',
@@ -31,7 +25,13 @@ function App() {
           },
         }}
       >
-        <Box sx={{ xs: '40px', display: 'flex', justifyContent: 'center' }}>
+        <Box
+          sx={{
+            xs: '40px',
+            display: 'flex',
+            justifyContent: 'center',
+          }}
+        >
           <img src="/images/logo.svg" alt="" />
         </Box>
 
@@ -49,44 +49,20 @@ function App() {
         </Stack>
 
         <Paper
-          elevation={0}
-          sx={{ height: '400px', mt: 3, p: 3, borderRadius: '16px' }}
+          elevation={24}
+          sx={{
+            height: 'fit-content',
+            mt: 3,
+            p: 3,
+            borderRadius: '16px',
+            boxShadow: '0 10px 20px 10px var(--clr-blue-100)',
+          }}
         >
-          <Box component="form" noValidate>
-            <FormControl>
-              <FormLabel>
-                <Typography className="text-4-sb text-dark">
-                  Enter your details below
-                </Typography>
-              </FormLabel>
-
-              <RadioGroup row aria-label="" name="" defaultValue="imperial">
-                <FormControlLabel
-                  value="metric"
-                  control={<StyledRadio />}
-                  label="Metric"
-                />
-                <FormControlLabel
-                  value="imperial"
-                  control={<Radio />}
-                  label="Imperial"
-                />
-              </RadioGroup>
-              <FormHelperText></FormHelperText>
-            </FormControl>
-          </Box>
+          <Form />
         </Paper>
       </Container>
     </Box>
   );
 }
-
-const StyledRadio = styled(Radio)({
-  width: '30px',
-  height: '30px',
-  outline: '1px solid var(--clr-grey-500)',
-  border: 'none',
-  '&.MuiRadio-root': { display: 'none' },
-});
 
 export default App;
